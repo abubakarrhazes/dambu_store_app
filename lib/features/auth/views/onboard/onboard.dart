@@ -19,59 +19,67 @@ class Onboard extends StatefulWidget {
 class _OnboardState extends State<Onboard> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Stack(
-      children: [
-        // Page View Here
-        PageView(
-          children: [
-            OnboardViews(
-              image: AppImage.onboardImageOne,
-              headingText: AppText.onboardTextOneHeading,
-              subHeadingText: AppText.onbaordTextOneSub,
-            ),
-            OnboardViews(
-              image: AppImage.onboardImageTwo,
-              headingText: AppText.onboardTextThreeHeading,
-              subHeadingText: AppText.onboardTextThreeSub,
-            ),
-            OnboardViews(
-              image: AppImage.onboardImageThree,
-              headingText: AppText.onboardTextOneHeading,
-              subHeadingText: AppText.onbaordTextOneSub,
-            )
-          ],
-        ),
-        //Skip Button Here
-
-        Positioned(
-            right: 10,
-            child: TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Skip ',
-                  style: TextStyle(color: AppColors.primaryColor),
-                ))),
-
-        //Navigate With Smooth Indicator
-
-        Positioned(
-          bottom: 50,
-          left: 10,
-          child: SmoothPageIndicator(
-            controller: PageController(),
-            count: 3,
-            effect: ExpandingDotsEffect(
-                activeDotColor: AppColors.primaryColor, dotHeight: 10),
+    return SafeArea(
+      child: Scaffold(
+          body: Stack(
+        children: [
+          // Page View Here
+          PageView(
+            
+            children: [
+              OnboardViews(
+                image: AppImage.onboardImageOne,
+                headingText: AppText.onboardTextOneHeading,
+                subHeadingText: AppText.onbaordTextOneSub,
+              ),
+              OnboardViews(
+                image: AppImage.onboardImageTwo,
+                headingText: AppText.onboardTextThreeHeading,
+                subHeadingText: AppText.onboardTextThreeSub,
+              ),
+              OnboardViews(
+                image: AppImage.onboardImageThree,
+                headingText: AppText.onboardTextOneHeading,
+                subHeadingText: AppText.onbaordTextOneSub,
+              )
+            ],
           ),
-        ),
-
-        // Button
-        Positioned(
+          //Skip Button Here
+      
+          Positioned(
+              right: 10,
+              child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Skip ',
+                    style: TextStyle(color: AppColors.primaryColor),
+                  ))),
+      
+          //Navigate With Smooth Indicator
+      
+          Positioned(
             bottom: 50,
-            right: 10,
-            child: ElevatedButton(onPressed: () {}, child: Text('Next')))
-      ],
-    ));
+            left: 10,
+            child: SmoothPageIndicator(
+              controller: PageController(),
+              count: 3,
+              effect: ExpandingDotsEffect(
+                  activeDotColor: AppColors.primaryColor, dotHeight: 10),
+            ),
+          ),
+      
+          // Button
+          Positioned(
+              bottom: 50,
+              right: 10,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+      
+      
+                  ),
+                  onPressed: () {}, child: Text('Next')))
+        ],
+      )),
+    );
   }
 }
