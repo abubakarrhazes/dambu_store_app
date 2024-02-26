@@ -12,4 +12,10 @@ class AppImage {
 
   static const onboardImageThree =
       "assets/images/undraw_Stripe_payments_re_chlm.png";
+
+
+  // Social Options Images
+  static const facebookLogo = 'assets/logos/img_facebook.png';
+  static const googleLogo   = 'assets/logos/google.png';
+  static const twitterLogo  = 'assets/logos/twitter.png';
 }

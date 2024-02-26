@@ -1,4 +1,11 @@
 class AppText {
+
+
+
+
+  static const appName = 'Dambu Store';
+  static const registerAccount = 'Create Account Now';
+  static const loginVia = 'via';
   //Onbaording Text
   static const onboardTextOneHeading = "Explore Our Wide Selection";
   static const onbaordTextOneSub =

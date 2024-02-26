@@ -20,20 +20,20 @@ class LocalStorage{
     _sharedPreferences = await SharedPreferences.getInstance();
   }
 
-  Future<String?> getAccessToken() async {
-    return _sharedPreferences.getString('accessToken');
+  Future<String?> getToken() async {
+    return _sharedPreferences.getString('token');
   }
 
-  Future<bool> setAccessToken(String value) {
-    return _sharedPreferences.setString("accessToken", value);
+  Future<bool> setToken(String token) {
+    return _sharedPreferences.setString("token", token);
   }
 
   Future<String?> getUserId() async {
-    return _sharedPreferences.getString('userId');
+    return _sharedPreferences.getString('id');
   }
 
   Future<bool> setUserId(String id) {
-    return _sharedPreferences.setString("userId", id);
+    return _sharedPreferences.setString("id", id);
   }
 
 
